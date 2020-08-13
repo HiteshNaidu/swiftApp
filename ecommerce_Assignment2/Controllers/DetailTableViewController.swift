@@ -15,6 +15,7 @@ class DetailTableViewController: UITableViewController {
     @IBOutlet weak var productTitleLabel: UILabel!
     @IBOutlet weak var productImageView: UIImageView!
     
+    
     var product: Product?
     
     
@@ -37,6 +38,8 @@ class DetailTableViewController: UITableViewController {
             productTitleLabel.text = product!.name
             productPriceLabel.text = " $ \(product!.price) "
             productDetailLabel.text = product!.details
+            productImageView.isUserInteractionEnabled = true;
+    
             
             let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(DetailTableViewController.tap(_:)));
                    productImageView.isUserInteractionEnabled = true
@@ -58,11 +61,16 @@ class DetailTableViewController: UITableViewController {
 
     @objc func tap(_ gestureRecognizer: UITapGestureRecognizer) {
         print("In single tap")
-        let point = gestureRecognizer.location(in: productImageView)
+        var point = gestureRecognizer.location(in: productImageView)
+        print(point.x)
         let menu = UIMenuController.shared
-            let logout = UIMenuItem(title: "Logout",action: #selector(DetailTableViewController.logout))
-            menu.menuItems = [logout]
-            menu.showMenu(from:productImageView, rect: <#T##CGRect#>)
+        let check = productImageView.becomeFirstResponder()
+        print(check)
+        let logout = UIMenuItem(title: "Logout",action: #selector(DetailTableViewController.logout))
+        menu.menuItems = [logout]
+        let rectObj:CGRect = CGRect(x:point.x, y:point.y ,width: 10,height: 7);
+        menu.showMenu(from:productImageView, rect: rectObj)
+        productImageView.setNeedsDisplay();
         
     }
 
