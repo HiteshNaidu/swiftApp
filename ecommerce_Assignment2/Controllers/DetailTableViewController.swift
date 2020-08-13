@@ -39,14 +39,20 @@ class DetailTableViewController: UITableViewController {
             productPriceLabel.text = " $ \(product!.price) "
             productDetailLabel.text = product!.details
             productImageView.isUserInteractionEnabled = true;
+           // self.tableView.bringSubviewToFront(productImageView)
     
             
             let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(DetailTableViewController.tap(_:)));
-                   productImageView.isUserInteractionEnabled = true
+                   //productImageView.isUserInteractionEnabled = true
                    productImageView.addGestureRecognizer(tapRecognizer)
             
             //tapGesture = UITapGestureRecognizer(target: self, action: #selector(DetailTableViewController.doubleTap(_:)));
         }
+   /* override func viewDidAppear(_ animated: Bool) {
+        super .viewDidAppear(animated)
+        productImageView .becomeFirstResponder()
+    }*/
+    
         
     // logout and go back to first view
         
@@ -55,8 +61,11 @@ class DetailTableViewController: UITableViewController {
     }
     // when the cell is selcted, it will not be highlighted
         override func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
+            
                 return nil                                // we prevent any selection in detail page
             }
+    
+    
     
 
     @objc func tap(_ gestureRecognizer: UITapGestureRecognizer) {
@@ -64,11 +73,13 @@ class DetailTableViewController: UITableViewController {
         var point = gestureRecognizer.location(in: productImageView)
         print(point.x)
         let menu = UIMenuController.shared
+        tableView.bringSubviewToFront(productImageView)
         let check = productImageView.becomeFirstResponder()
         print(check)
         let logout = UIMenuItem(title: "Logout",action: #selector(DetailTableViewController.logout))
         menu.menuItems = [logout]
         let rectObj:CGRect = CGRect(x:point.x, y:point.y ,width: 10,height: 7);
+        print(rectObj)
         menu.showMenu(from:productImageView, rect: rectObj)
         productImageView.setNeedsDisplay();
         
