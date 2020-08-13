@@ -9,8 +9,7 @@
 import UIKit
 
 class ProductTableViewController: UITableViewController {
-   
-        //Mark: - Data Model
+   @IBOutlet weak var logoutOutlet: UIBarButtonItem!        //Mark: - Data Model
         
      var products = CoreDataManager.fetchProduct()
         
@@ -49,6 +48,7 @@ class ProductTableViewController: UITableViewController {
             return " Products"
         }
         
+    
     // when a row at indexPath is selected
         var selectedItem : Product?
         override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
