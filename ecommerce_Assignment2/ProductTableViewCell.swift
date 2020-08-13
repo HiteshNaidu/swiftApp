@@ -19,7 +19,7 @@ class ProductTableViewCell: UITableViewCell {
        var product: Product?{
        didSet {
            self.updateUI()
-           
+        
            }
            
        }

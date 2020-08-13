@@ -224,9 +224,6 @@
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="handbag6" translatesAutoresizingMaskIntoConstraints="NO" id="Hub-bE-f5Y">
                                                     <rect key="frame" x="0.0" y="0.0" width="414" height="243"/>
                                                     <gestureRecognizers/>
-                                                    <connections>
-                                                        <outletCollection property="gestureRecognizers" destination="fRn-ex-Ekr" appends="YES" id="IBc-06-YMI"/>
-                                                    </connections>
                                                 </imageView>
                                             </subviews>
                                             <constraints>
@@ -346,10 +343,10 @@
                         <outlet property="productImageView" destination="Hub-bE-f5Y" id="7Rp-KU-cgt"/>
                         <outlet property="productPriceLabel" destination="ZtY-6v-kTS" id="Sc8-Jz-fM1"/>
                         <outlet property="productTitleLabel" destination="Nvm-Wg-Yj0" id="QOn-9e-ag6"/>
+                        <segue destination="CTT-27-wOG" kind="show" identifier="showImage" id="q14-5d-RZo"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HU2-bi-2Rr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="fRn-ex-Ekr"/>
             </objects>
             <point key="canvasLocation" x="891" y="-477"/>
         </scene>
@@ -371,6 +368,36 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vbM-BI-a3V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-535" y="-477"/>
+        </scene>
+        <!--View Full Image-->
+        <scene sceneID="pIU-DU-qhA">
+            <objects>
+                <viewController id="CTT-27-wOG" customClass="ViewFullImage" customModule="ecommerce_Assignment2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aSE-KN-WW2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iSg-bM-dc2">
+                                <rect key="frame" x="0.0" y="248" width="414" height="288"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="iSg-bM-dc2" firstAttribute="top" secondItem="aSE-KN-WW2" secondAttribute="top" constant="248" id="9SO-Rz-QOZ"/>
+                            <constraint firstAttribute="trailing" secondItem="iSg-bM-dc2" secondAttribute="trailing" id="Fm4-5W-bg6"/>
+                            <constraint firstItem="iSg-bM-dc2" firstAttribute="leading" secondItem="aSE-KN-WW2" secondAttribute="leading" id="hjP-09-gQd"/>
+                            <constraint firstAttribute="bottom" secondItem="iSg-bM-dc2" secondAttribute="bottom" constant="306" id="q4G-in-J0p"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="qun-76-NEe"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="8Ob-6h-GAK"/>
+                    <connections>
+                        <outlet property="productImage" destination="iSg-bM-dc2" id="TWg-1O-BS0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b0t-Rt-tmw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-536.231884057971" y="269.19642857142856"/>
         </scene>
     </scenes>
     <resources>

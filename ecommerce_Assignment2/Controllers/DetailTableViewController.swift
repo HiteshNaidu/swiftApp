@@ -17,41 +17,27 @@ class DetailTableViewController: UITableViewController {
     
     
     var product: Product?
-    
-    
-//    required init?(coder aDecoder: NSCoder) {
-//        super.init(coder:aDecoder)
-//        let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(DetailTableViewController.tap(_:)));
-//        productImageView.isUserInteractionEnabled = true
-//        productImageView.addGestureRecognizer(tapRecognizer)
-//
-//
-//    }
+
         override func viewDidLoad() {
             title = "Product Detail"
             
             
             // set product to our imageview and labels,
-            
-            
             productImageView.image = product!.image
             productTitleLabel.text = product!.name
             productPriceLabel.text = " $ \(product!.price) "
             productDetailLabel.text = product!.details
             productImageView.isUserInteractionEnabled = true;
-           // self.tableView.bringSubviewToFront(productImageView)
     
             
             let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(DetailTableViewController.tap(_:)));
                    //productImageView.isUserInteractionEnabled = true
                    productImageView.addGestureRecognizer(tapRecognizer)
-            
-            //tapGesture = UITapGestureRecognizer(target: self, action: #selector(DetailTableViewController.doubleTap(_:)));
         }
-   /* override func viewDidAppear(_ animated: Bool) {
-        super .viewDidAppear(animated)
-        productImageView .becomeFirstResponder()
-    }*/
+    
+    override var canBecomeFirstResponder : Bool {
+        return true
+    }
     
         
     // logout and go back to first view
@@ -65,32 +51,36 @@ class DetailTableViewController: UITableViewController {
                 return nil                                // we prevent any selection in detail page
             }
     
-    
-    
 
     @objc func tap(_ gestureRecognizer: UITapGestureRecognizer) {
-        print("In single tap")
         var point = gestureRecognizer.location(in: productImageView)
-        print(point.x)
         let menu = UIMenuController.shared
         tableView.bringSubviewToFront(productImageView)
-        let check = productImageView.becomeFirstResponder()
-        print(check)
         let logout = UIMenuItem(title: "Logout",action: #selector(DetailTableViewController.logout))
-        menu.menuItems = [logout]
+        let seeFullImage = UIMenuItem(title: "See Full Image", action: #selector(DetailTableViewController.showFullImage))
+        
+        menu.menuItems = [logout,seeFullImage]
         let rectObj:CGRect = CGRect(x:point.x, y:point.y ,width: 10,height: 7);
         print(rectObj)
         menu.showMenu(from:productImageView, rect: rectObj)
-        productImageView.setNeedsDisplay();
-        
     }
-
     
     @objc func logout()
     {
-        dismiss(animated: true, completion: nil)
+      dismiss(animated: true, completion: nil)
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let controller = segue.destination as? ViewFullImage
+        controller!.myImage = product!.image
+        
+        
+    }
+    
+    @objc func showFullImage()
+    {
+         self.performSegue(withIdentifier: "showImage", sender: self)
+    }
 
 
 }

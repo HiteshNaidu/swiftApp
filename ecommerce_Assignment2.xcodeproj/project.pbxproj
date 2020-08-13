@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B92366E024E5DCF60001D086 /* ViewFullImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92366DF24E5DCF60001D086 /* ViewFullImage.swift */; };
 		D8DAB74924C0F5C800BCBBC0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DAB74824C0F5C800BCBBC0 /* AppDelegate.swift */; };
 		D8DAB74B24C0F5C800BCBBC0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DAB74A24C0F5C800BCBBC0 /* SceneDelegate.swift */; };
 		D8DAB75024C0F5C800BCBBC0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8DAB74E24C0F5C800BCBBC0 /* Main.storyboard */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B92366DF24E5DCF60001D086 /* ViewFullImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewFullImage.swift; sourceTree = "<group>"; };
 		D8DAB74524C0F5C800BCBBC0 /* ecommerce_Assignment2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ecommerce_Assignment2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8DAB74824C0F5C800BCBBC0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D8DAB74A24C0F5C800BCBBC0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				D8DAB75E24C0F65800BCBBC0 /* ProductTableViewController.swift */,
+				B92366DF24E5DCF60001D086 /* ViewFullImage.swift */,
 				D8DAB76024C0F69800BCBBC0 /* DetailTableViewController.swift */,
 				D8DAB76224C0F6FB00BCBBC0 /* LoginViewController.swift */,
 				D8EA464F24E1DB97000D80C1 /* CoreDataManager.swift */,
@@ -181,6 +184,7 @@
 				D8DAB76124C0F69800BCBBC0 /* DetailTableViewController.swift in Sources */,
 				D8DAB74924C0F5C800BCBBC0 /* AppDelegate.swift in Sources */,
 				D8DAB75F24C0F65800BCBBC0 /* ProductTableViewController.swift in Sources */,
+				B92366E024E5DCF60001D086 /* ViewFullImage.swift in Sources */,
 				D8DAB76D24C113D000BCBBC0 /* ProductTableViewCell.swift in Sources */,
 				D8DAB74B24C0F5C800BCBBC0 /* SceneDelegate.swift in Sources */,
 				D8DAB76724C0F98D00BCBBC0 /* User.swift in Sources */,
