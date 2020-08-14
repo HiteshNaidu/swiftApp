@@ -197,6 +197,7 @@
                     <connections>
                         <outlet property="logoutOutlet" destination="FIT-QT-uyj" id="Az7-3o-vAo"/>
                         <segue destination="AES-Zr-lxi" kind="show" identifier="showProductDetail" id="Mlx-zs-bB3"/>
+                        <segue destination="yEO-K9-rYd" kind="show" identifier="profile" id="nmo-tY-Rvm"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jpR-VE-Iq0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -397,7 +398,54 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b0t-Rt-tmw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-536.231884057971" y="269.19642857142856"/>
+            <point key="canvasLocation" x="948" y="278"/>
+        </scene>
+        <!--Profile View Controller-->
+        <scene sceneID="zbN-PF-nQc">
+            <objects>
+                <viewController id="yEO-K9-rYd" customClass="ProfileViewController" customModule="ecommerce_Assignment2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oax-Wf-M2q">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="47" translatesAutoresizingMaskIntoConstraints="NO" id="duR-Jq-fU8">
+                                <rect key="frame" x="32" y="312" width="350" height="119"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ggE-7M-1lm">
+                                        <rect key="frame" x="108.5" y="0.0" width="133" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x09-X5-A57">
+                                        <rect key="frame" x="139.5" y="83" width="71" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="350" id="5xl-c6-nor"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="duR-Jq-fU8" secondAttribute="trailing" constant="12" id="1Hv-kn-kjO"/>
+                            <constraint firstItem="duR-Jq-fU8" firstAttribute="leading" secondItem="oax-Wf-M2q" secondAttribute="leadingMargin" constant="12" id="8mU-Lv-yEb"/>
+                            <constraint firstItem="duR-Jq-fU8" firstAttribute="top" secondItem="oax-Wf-M2q" secondAttribute="topMargin" constant="256" id="lup-yy-EsA"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="duR-Jq-fU8" secondAttribute="bottom" constant="377" id="prd-TR-bzd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="3Sl-sJ-7Q3"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="y5P-Eh-G2J"/>
+                    <connections>
+                        <outlet property="userProfile" destination="x09-X5-A57" id="Lko-W9-bUy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JA4-v4-dpy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-57.971014492753625" y="277.90178571428572"/>
         </scene>
     </scenes>
     <resources>

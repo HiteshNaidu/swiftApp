@@ -53,13 +53,21 @@ class DetailTableViewController: UITableViewController {
     
 
     @objc func tap(_ gestureRecognizer: UITapGestureRecognizer) {
-        var point = gestureRecognizer.location(in: productImageView)
+        
+        //fetching the screen coordiniates where users touched
+        let point = gestureRecognizer.location(in: productImageView)
+        
+        //Creating Menu object
         let menu = UIMenuController.shared
         tableView.bringSubviewToFront(productImageView)
-        let logout = UIMenuItem(title: "Logout",action: #selector(DetailTableViewController.logout))
+        
+        //Creating menu items
+//        let logout = UIMenuItem(title: "Logout",action: #selector(DetailTableViewController.logout))
         let seeFullImage = UIMenuItem(title: "See Full Image", action: #selector(DetailTableViewController.showFullImage))
         
-        menu.menuItems = [logout,seeFullImage]
+        //Setting menu items to menu controllers 
+//        menu.menuItems = [logout,seeFullImage]
+        menu.menuItems = [seeFullImage]
         let rectObj:CGRect = CGRect(x:point.x, y:point.y ,width: 10,height: 7);
         print(rectObj)
         menu.showMenu(from:productImageView, rect: rectObj)

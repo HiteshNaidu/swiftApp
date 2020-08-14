@@ -1,0 +1,57 @@
+
+/* Class = "UILabel"; text = "Email"; ObjectID = "4VI-5g-vUG"; */
+"4VI-5g-vUG.text" = "Email";
+
+/* Class = "UILabel"; text = "Product Title Label"; ObjectID = "6g5-uJ-NV9"; */
+"6g5-uJ-NV9.text" = "Étiquette du titre du produit";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "F9W-tv-pm4"; */
+"F9W-tv-pm4.text" = "Titre";
+
+/* Class = "UIBarButtonItem"; title = "Logout"; ObjectID = "FIT-QT-uyj"; */
+"FIT-QT-uyj.title" = "Se déconnecter";
+
+/* Class = "UILabel"; text = "Password"; ObjectID = "Fh0-C0-3vW"; */
+"Fh0-C0-3vW.text" = "Mot de passe";
+
+/* Class = "UITableViewSection"; headerTitle = "Detail"; ObjectID = "Gbj-Zq-ykq"; */
+"Gbj-Zq-ykq.headerTitle" = "Détail";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Nvm-Wg-Yj0"; */
+"Nvm-Wg-Yj0.text" = "Label";
+
+/* Class = "UIBarButtonItem"; title = "Logout"; ObjectID = "RRe-Bs-wLh"; */
+"RRe-Bs-wLh.title" = "Étiquette";
+
+/* Class = "UILabel"; text = "Price"; ObjectID = "RZM-OM-qzV"; */
+"RZM-OM-qzV.text" = "Prix";
+
+/* Class = "UILabel"; text = "Incorrect Email or Password"; ObjectID = "SJQ-xI-2PD"; */
+"SJQ-xI-2PD.text" = "Email ou mot de passe incorrect";
+
+/* Class = "UILabel"; text = "Our Products are great quality for less pricean find all what you are looking for ......."; ObjectID = "ShG-Dr-qtV"; */
+"ShG-Dr-qtV.text" = "Nos produits sont de grande qualité pour moins cher, trouvez tout ce que vous recherchez .......";
+
+/* Class = "UITextField"; placeholder = "Enter Password"; ObjectID = "Y4V-tw-vj1"; */
+"Y4V-tw-vj1.placeholder" = "Entrer le mot de passe";
+
+/* Class = "UILabel"; text = "Price"; ObjectID = "ZtY-6v-kTS"; */
+"ZtY-6v-kTS.text" = "Prix";
+
+/* Class = "UITableViewSection"; headerTitle = "Image"; ObjectID = "cR5-6h-Nfe"; */
+"cR5-6h-Nfe.headerTitle" = "Image";
+
+/* Class = "UILabel"; text = "Price"; ObjectID = "gXP-G4-hBs"; */
+"gXP-G4-hBs.text" = "Prix";
+
+/* Class = "UITextField"; placeholder = "Enter Email Address"; ObjectID = "lNH-XV-Pwh"; */
+"lNH-XV-Pwh.placeholder" = "Entrer l'adresse e-mail";
+
+/* Class = "UILabel"; text = "This is our awsom product. you can get it from any of our stores or order it online"; ObjectID = "mHp-kJ-LIn"; */
+"mHp-kJ-LIn.text" = "Ceci est notre produit awsom. vous pouvez l'obtenir dans l'un de nos magasins ou le commander en ligne";
+
+/* Class = "UIButton"; normalTitle = "Login"; ObjectID = "scp-pQ-3Qy"; */
+"scp-pQ-3Qy.normalTitle" = "S'identifier";
+
+/* Class = "UILabel"; text = "Online Store"; ObjectID = "yDp-24-Ex7"; */
+"yDp-24-Ex7.text" = "Boutique en ligne";

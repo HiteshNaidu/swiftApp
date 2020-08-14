@@ -12,14 +12,49 @@ class ProductTableViewController: UITableViewController {
    @IBOutlet weak var logoutOutlet: UIBarButtonItem!        //Mark: - Data Model
         
      var products = CoreDataManager.fetchProduct()
-        
+     var userEmail:String!
+    
         override func viewDidLoad() {
             super.viewDidLoad()
             title = " Online Store"
             tableView.rowHeight = UITableView.automaticDimension
             tableView.estimatedRowHeight = 500
-            
-        }
+            let logo = UIImage(named: "profile.png")
+            print(logo)
+            let imageView = UIImageView(image: logo)
+            self.navigationItem.titleView = imageView
+            let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(ProductTableViewController.tap(_:)));
+            self.navigationItem.titleView!.isUserInteractionEnabled = true;
+            self.navigationItem.titleView!.addGestureRecognizer(tapRecognizer)
+            }
+    
+    override var canBecomeFirstResponder : Bool {
+        return true
+    }
+    
+    @objc func tap(_ gestureRecognizer: UITapGestureRecognizer) {
+        
+        //fetching the screen coordiniates where users touched
+        let point = gestureRecognizer.location(in: self.navigationItem.titleView)
+        
+        //Creating Menu object
+        let menu = UIMenuController.shared
+        //Creating menu items
+        let showPro = UIMenuItem(title: "Profile",action: #selector(ProductTableViewController.showProfile))
+    
+        //Setting menu items to menu controllers
+        menu.menuItems = [showPro]
+        let rectObj:CGRect = CGRect(x:point.x, y:point.y ,width: 8,height: 7);
+        print(rectObj)
+        menu.showMenu(from:self.navigationItem.titleView!, rect: rectObj)
+    }
+    
+    
+    
+    @objc func showProfile()
+    {
+      self.performSegue(withIdentifier: "profile", sender: self)
+    }
     
         // table view data source
         // Number of section in Table View
@@ -63,6 +98,14 @@ class ProductTableViewController: UITableViewController {
                 let detailTableViewController = segue.destination as! DetailTableViewController
             // we assign the selected item to product in DetailTableViewController
                 detailTableViewController.product = selectedItem
+            }
+            
+            else if segue.identifier == "profile"
+            {
+                let profileViewController = segue.destination as! ProfileViewController
+                profileViewController.userEmail = userEmail
+                
+                
             }
             
         }
